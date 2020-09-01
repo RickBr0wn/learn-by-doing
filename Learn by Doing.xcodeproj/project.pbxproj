@@ -18,7 +18,33 @@
 		1497729024FE98020048F418 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497728F24FE98020048F418 /* CardData.swift */; };
 		1497729224FE9C200048F418 /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1497729124FE9C200048F418 /* sound-chime.mp3 */; };
 		1497729424FE9C3E0048F418 /* PlaySounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497729324FE9C3E0048F418 /* PlaySounds.swift */; };
+		1497729A24FEA5F60048F418 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1497729924FEA5F60048F418 /* Stickers.xcassets */; };
+		1497729E24FEA5F60048F418 /* Learn by Doing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1497729724FEA5F50048F418 /* Learn by Doing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1497729C24FEA5F60048F418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1497726C24FE7DC20048F418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1497729624FEA5F50048F418;
+			remoteInfo = stickers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		149772A224FEA5F60048F418 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1497729E24FEA5F60048F418 /* Learn by Doing.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1497727424FE7DC20048F418 /* Learn by Doing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn by Doing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +60,9 @@
 		1497728F24FE98020048F418 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		1497729124FE9C200048F418 /* sound-chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-chime.mp3"; sourceTree = "<group>"; };
 		1497729324FE9C3E0048F418 /* PlaySounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySounds.swift; sourceTree = "<group>"; };
+		1497729724FEA5F50048F418 /* Learn by Doing.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Learn by Doing.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1497729924FEA5F60048F418 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		1497729B24FEA5F60048F418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1497727624FE7DC20048F418 /* Learn by Doing */,
+				1497729824FEA5F50048F418 /* stickers */,
 				1497727524FE7DC20048F418 /* Products */,
 				1497729124FE9C200048F418 /* sound-chime.mp3 */,
 			);
@@ -60,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1497727424FE7DC20048F418 /* Learn by Doing.app */,
+				1497729724FEA5F50048F418 /* Learn by Doing.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +121,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1497729824FEA5F50048F418 /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				1497729924FEA5F60048F418 /* Stickers.xcassets */,
+				1497729B24FEA5F60048F418 /* Info.plist */,
+			);
+			path = stickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,15 +140,32 @@
 				1497727024FE7DC20048F418 /* Sources */,
 				1497727124FE7DC20048F418 /* Frameworks */,
 				1497727224FE7DC20048F418 /* Resources */,
+				149772A224FEA5F60048F418 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1497729D24FEA5F60048F418 /* PBXTargetDependency */,
 			);
 			name = "Learn by Doing";
 			productName = "Learn by Doing";
 			productReference = 1497727424FE7DC20048F418 /* Learn by Doing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1497729624FEA5F50048F418 /* stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1497729F24FEA5F60048F418 /* Build configuration list for PBXNativeTarget "stickers" */;
+			buildPhases = (
+				1497729524FEA5F50048F418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = stickers;
+			productName = stickers;
+			productReference = 1497729724FEA5F50048F418 /* Learn by Doing.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -121,6 +178,9 @@
 				ORGANIZATIONNAME = "Rick Brown";
 				TargetAttributes = {
 					1497727324FE7DC20048F418 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					1497729624FEA5F50048F418 = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
@@ -139,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				1497727324FE7DC20048F418 /* Learn by Doing */,
+				1497729624FEA5F50048F418 /* stickers */,
 			);
 		};
 /* End PBXProject section */
@@ -152,6 +213,14 @@
 				1497729224FE9C200048F418 /* sound-chime.mp3 in Resources */,
 				1497728124FE7DC40048F418 /* Preview Assets.xcassets in Resources */,
 				1497727E24FE7DC40048F418 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1497729524FEA5F50048F418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1497729A24FEA5F60048F418 /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +242,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1497729D24FEA5F60048F418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1497729624FEA5F50048F418 /* stickers */;
+			targetProxy = 1497729C24FEA5F60048F418 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1497728224FE7DC40048F418 /* LaunchScreen.storyboard */ = {
@@ -340,6 +417,36 @@
 			};
 			name = Release;
 		};
+		149772A024FEA5F60048F418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C6DQVPTV2K;
+				INFOPLIST_FILE = stickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.rickBr0wn.Learn-by-Doing.stickers";
+				PRODUCT_NAME = "Learn by Doing";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		149772A124FEA5F60048F418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C6DQVPTV2K;
+				INFOPLIST_FILE = stickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.rickBr0wn.Learn-by-Doing.stickers";
+				PRODUCT_NAME = "Learn by Doing";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,6 +464,15 @@
 			buildConfigurations = (
 				1497728924FE7DC40048F418 /* Debug */,
 				1497728A24FE7DC40048F418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1497729F24FEA5F60048F418 /* Build configuration list for PBXNativeTarget "stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				149772A024FEA5F60048F418 /* Debug */,
+				149772A124FEA5F60048F418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
